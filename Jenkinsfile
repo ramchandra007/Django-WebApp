@@ -10,7 +10,6 @@ stage('aws cred'){
 steps{
      withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'AWS-CRED', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
     // some block
-}
     
   }
  }   
@@ -21,6 +20,7 @@ steps{
                  terraform init
                  terraform plan -out=dev.tfplan
                  terraform apply dev.tfplan
+                 '''
                     }
                 }
             }
