@@ -1,8 +1,7 @@
 
 provider "aws" {
   region     = "ap-northeast-3"
-  access_key = ""
-  secret_key = ""
+
 }
 terraform {
   required_providers {
@@ -13,10 +12,6 @@ terraform {
   }
   required_version = ">= 0.14.9"
 }
-
-
-
-
 
 resource "aws_instance" "jenkins" {
   ami           = "ami-0db6b6e701fbc0603"
