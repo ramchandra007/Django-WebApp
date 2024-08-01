@@ -21,9 +21,9 @@ steps{
                  terraform plan -out=dev.tfplan
                  terraform apply dev.tfplan
                  '''
-                    }
                 }
             }
-        
+        }
+    }
        
     
