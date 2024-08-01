@@ -5,10 +5,12 @@ provider "aws" {
 resource "aws_instance" "nani" {
   ami                    = "ami-0db6b6e701fbc0603"
   instance_type          = "t2.micro"
-  key_name = "kins"
-  vpc_security_group_ids = [ "sg-08c4a01c6da41754f" ]
-  
-
+  key_name               = "kins"
+  vpc_security_group_ids = [ "sg-08c4a01c6da41754f"]
+  tags = {
+    Name = "ram"
+  }
+   
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get update",
