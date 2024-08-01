@@ -27,7 +27,6 @@ resource "aws_instance" "nani" {
       "/home/ubuntu/demo/bin/python manage.py migrate",
       "/home/ubuntu/demo/bin/python manage.py runserver 0.0.0.0:8000",
     ]
-  }
 
   connection {
     type        = "ssh"
@@ -35,5 +34,6 @@ resource "aws_instance" "nani" {
     private_key = file("kins.pem")
     host        = aws_instance.nani.public_ip
   }
+ }
 }
                                  
