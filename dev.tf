@@ -18,16 +18,17 @@ resource "aws_instance" "nani" {
       "sudo apt install python3-pip -y",
       "sudo apt install python3-virtualenv -y",
       "sudo apt install python3-venv -y",
-      "/usr/bin/python3 -m venv demo",
-      "source /home/ubuntu/demo/bin/activate",
-      "https://github.com/ramchandra007/Django-WebApp.git",
-      "cd Django-WebApp",
-      "/home/ubuntu/demo/bin/pip install django",
-      "/home/ubuntu/demo/bin/pip install django-crispy-forms",
-      "/home/ubuntu/demo/bin/pip install pillow",
-      "/home/ubuntu/demo/bin/python manage.py makemigrations",
-      "/home/ubuntu/demo/bin/python manage.py migrate",
-      "/home/ubuntu/demo/bin/python manage.py runserver 0.0.0.0:8000",
+      "/usr/bin/python3 -m venv ram",
+      "source /home/ubuntu/ram/bin/activate",
+      "https://smuralimohan22@dev.azure.com/smuralimohan22/lms7.9/_git/lms7.9",
+      "cd lms7.9",
+      "/home/ubuntu/ram/bin/pip install django",
+      "/home/ubuntu/ram/bin/pip install django-crispy-forms",
+      "/home/ubuntu/ram/bin/pip install pillow",
+      "/home/ubuntu/ram/bin/pip install -r requirements.txt
+      "/home/ubuntu/ram/bin/python manage.py makemigrations",
+      "/home/ubuntu/ram/bin/python manage.py migrate",
+      "/home/ubuntu/ram/bin/python manage.py runserver 0.0.0.0:8000",
     ]
 
   connection {
