@@ -10,7 +10,7 @@ pipeline {
         stage('docker') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'tomcat-crd') {
+                    withDockerRegistry(credentialsId: 'ram') {
                          sh 'docker build -t ramchandra777/django .'
                          sh 'docker push ramchandra777/django:latest'
                    }
