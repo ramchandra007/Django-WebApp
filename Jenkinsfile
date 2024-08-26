@@ -10,9 +10,9 @@ pipeline {
         stage('docker') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'kkk') {
-                         sh 'docker build -t ramchandra777/django .'
-                         sh 'docker push ramchandra777/django:latest'
+                   withDockerRegistry(credentialsId: 'pk') {
+                         sh 'docker build -t ramchandramazzari/django .'
+                         sh 'docker push ramchandramazzari/django:latest'
                    }
                }
             }
